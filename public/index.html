@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>unasus</title>
+    <meta charset="UTF-8">
+    <title>Shopping List App</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but unasus doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="shopping-list">
+      <h1>{{ header }}</h1>
+      <input type="text" v-model="header">
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+  <script>
+    var shoppingList = new Vue({
+      el: '#shopping-list',
+      data: {
+        header: 'Vue is ready to party hard!'
+      }
+    })
+  </script>
   </body>
 </html>
