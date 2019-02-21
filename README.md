@@ -1,4 +1,6 @@
-# unasus
+# Getting Started with Vue.js - Scotch io
+
+https://scotch.io/courses/getting-started-with-vue
 
 ## Project setup
 ```
