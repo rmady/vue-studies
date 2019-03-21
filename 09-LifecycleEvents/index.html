@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Vue Like a Boss!</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+
+  <!-- js -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- our template -->
+  <section id="app" class="section container">
+    {{count}}
+    <a @click="increment" class="button is-info">++</a>
+  </section>
+
+  <!-- our javascript -->
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        count: 0
+      },
+      methods: {
+        increment: function () {
+          this.count++;
+        }
+      },
+      beforeCreate: function() {
+        this.increment();
+      },
+      created: function () {
+        this.increment();
+      },
+      updated: function () {
+        alert('its up to u my friend');
+      }
+    });
+  </script>
+</body>
+</html>

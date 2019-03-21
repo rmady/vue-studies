@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Basics</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+
+  <!-- js -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+  <!-- our template -->
+  <section id="app" class="section container">
+      <p>Name: {{ name }}</p>
+      <p>Username: {{ username}}</p>
+      <p>e-mail: {{ email }}</p>
+    <a href="" class="button is-info" v-on:click="mess">Mess up!</a>
+  </section>
+
+  <!-- our javascript -->
+  <script>
+    // const button = document.querySelector('butotn');
+    // button.addEventListener('click', mess);
+    // function mess() {
+    //   alert('mess');
+    // }
+    var app = new Vue({
+      el: '#app',
+      data: {
+        name: 'Katakuri',
+        username: 'kat',
+        email: 'kat@rmady.com'
+
+      },
+      methods: {
+        mess: function() {
+          alert(`${this.name} is messing everything...`);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

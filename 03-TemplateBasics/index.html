@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Vue Like a Boss!</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+
+  <!-- js -->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- our template -->
+  <section id="app" class="section container">
+      {{ avatar }}
+    <img height="300" width="300" v-bind:src="avatar" >
+    <img height="300" width="300" :src="avatar">
+
+    <div v-if="isSuccess" class="notification is-success">
+      Yes, we made it!
+    </div>
+    <div v-if="!isSuccess" class="notification is-danger">
+      No, we failed!
+    </div>
+
+  </section>
+
+  <!-- our javascript -->
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        avatar: 'https://data.whicdn.com/images/23002560/large.jpg',
+        isSuccess: true
+      }
+    });
+  </script>
+</body>
+</html>
